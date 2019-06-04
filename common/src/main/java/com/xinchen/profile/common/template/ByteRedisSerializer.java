@@ -1,4 +1,4 @@
-package com.xinchen.profile.template;
+package com.xinchen.profile.common.template;
 
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.SerializationException;

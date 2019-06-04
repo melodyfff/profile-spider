@@ -1,9 +1,7 @@
-package com.xinchen.profile.vo;
+package com.xinchen.profile.common.vo;
 
-import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
-import org.junit.Test;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.xinchen.profile.vo;
+package com.xinchen.profile.common.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

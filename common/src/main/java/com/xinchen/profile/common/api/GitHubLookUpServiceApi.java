@@ -1,6 +1,6 @@
-package com.xinchen.profile.api;
+package com.xinchen.profile.common.api;
 
-import com.xinchen.profile.vo.GitHubUserInfo;
+import com.xinchen.profile.common.vo.GitHubUserInfo;
 
 import java.util.concurrent.CompletableFuture;
 

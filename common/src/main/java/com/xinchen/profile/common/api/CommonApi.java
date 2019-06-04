@@ -1,4 +1,4 @@
-package com.xinchen.profile.api;
+package com.xinchen.profile.common.api;
 
 /**
  * @author Xin Chen (xinchenmelody@gmail.com)
