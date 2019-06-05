@@ -23,5 +23,12 @@ public class SynProperties implements Serializable {
     public class Info{
         private String url;
         private String param;
+        private String seed;
+    }
+
+    @Getter
+    @Setter
+    public class Image{
+        private String url;
     }
 }

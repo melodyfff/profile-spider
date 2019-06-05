@@ -1,7 +1,7 @@
 package com.xinchen.profile.service;
 
-import com.xinchen.profile.api.GitHubLookUpServiceApi;
-import com.xinchen.profile.vo.GitHubUserInfo;
+import com.xinchen.profile.common.api.GitHubLookUpServiceApi;
+import com.xinchen.profile.common.vo.GitHubUserInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;

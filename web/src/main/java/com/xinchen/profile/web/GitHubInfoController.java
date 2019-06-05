@@ -1,8 +1,8 @@
 package com.xinchen.profile.web;
 
-import com.xinchen.profile.api.CommonApi;
-import com.xinchen.profile.api.GitHubLookUpServiceApi;
-import com.xinchen.profile.vo.GitHubUserInfo;
+import com.xinchen.profile.common.api.CommonApi;
+import com.xinchen.profile.common.api.GitHubLookUpServiceApi;
+import com.xinchen.profile.common.vo.GitHubUserInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
  * @date Created In 2019/4/29 23:19
  */
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/github")
 @Slf4j
 public class GitHubInfoController {
 
@@ -32,7 +32,7 @@ public class GitHubInfoController {
         this.gitHubLookUpServiceApi = gitHubLookUpServiceApi;
     }
 
-    @GetMapping("/github/{user}")
+    @GetMapping("/{user}")
     public GitHubUserInfo queryUser(@PathVariable("user") String user) throws InterruptedException, ExecutionException {
         final CompletableFuture<GitHubUserInfo> info = gitHubLookUpServiceApi.findUser(CommonApi.GITHUB_USER_API.getUrl(), user);
         return info.get();
@@ -46,7 +46,7 @@ public class GitHubInfoController {
      * @throws InterruptedException InterruptedException
      * @throws ExecutionException ExecutionException
      */
-    @GetMapping("/github/list/{users}")
+    @GetMapping("/list/{users}")
     public List<Object> queryUsers(@PathVariable("users") String users) throws InterruptedException, ExecutionException {
         final List<String> userList = Arrays.asList(users.split(","));
         final List<CompletableFuture> queueList = new ArrayList<>();
